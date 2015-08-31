@@ -1,37 +1,70 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+<RelativeLayout android:id="@+id/main_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/hello_world"/>
 
     <EditText
         android:id="@+id/host"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
-        android:hint="set ntp host:" />
+        android:hint="set ntp host:"/>
 
     <EditText
         android:id="@+id/mTimeOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/host"
-        android:hint="set Sntp timeout:" />
+        android:hint="set Sntp timeout:"/>
 
     <Button
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onSntpSetting" />
+        android:layout_above="@+id/b3"
+        android:onClick="onReboot"
+        android:text="reboot"/>
+
+    <Button
+        android:layout_above="@+id/b4"
+        android:id="@+id/b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSntpSetting"
+        android:text="set ntp server"/>
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_above="@+id/b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onShowCurrentSetting"
+        android:text="show current settings"/>
+
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/b5"
+        android:onClick="onForceRefresh"
+        android:text="force refresh"/>
+
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onLocalRequestTime"
+        android:text="local force refresh"/>
 </RelativeLayout>

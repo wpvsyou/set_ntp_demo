@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/set_android_ntp_demo.iml" filepath="$PROJECT_DIR$/set_android_ntp_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/set_ntp_demo.iml" filepath="$PROJECT_DIR$/set_ntp_demo.iml" />
     </modules>
   </component>
 </project>
